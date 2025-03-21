@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter as FontSans } from 'next/font/google'
 import './globals.css'
-import './tailwind.css'
 import { cn } from '@/lib/utils'
 import { ThemeProvider } from '@/components/theme-provider'
 
@@ -22,9 +21,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="stylesheet" href="./tailwind.css" />
-      </head>
       <body className={cn('min-h-screen font-sans antialiased', fontSans.variable)}>
         <ThemeProvider
           attribute="class"
